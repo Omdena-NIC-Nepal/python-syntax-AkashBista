@@ -7,7 +7,7 @@ def format_string(name, age):
     Returns:
         str: Formatted string
     """
-    return (f"Hello!, My name is {name} and I am {age} years old.")
+    return f"My name is {name} and I am {age} years old"
 
 def conditional_check(number):
     """
@@ -49,7 +49,7 @@ def list_operations(numbers):
     maximum=max(numbers)
     minimum=min(numbers)
     number_tuple=tuple(total,maximum,minimum)
-    return (number_tuple)
+    return number_tuple
     
 
 def dict_operations(students_dict):
@@ -72,7 +72,9 @@ def set_operations(list1, list2):
     Returns:
         set: Common elements
     """
-    pass
+    set1=set(list1)
+    set2=set(list2)
+    return set1 & set2
 
 def arithmetic_ops(a, b):
     """
@@ -83,8 +85,14 @@ def arithmetic_ops(a, b):
     Returns:
         dict: Results of arithmetic operations
     """
-    pass
-
+    results = {
+        "sum": a+b,
+        "difference": a-b,
+        "product": a*b,
+        "quotient":a/b if b!=0 else None
+    }
+    return results
+    
 def logical_ops(x, y):
     """
     Perform logical operations.
@@ -94,7 +102,12 @@ def logical_ops(x, y):
     Returns:
         dict: Results of logical operations
     """
-    pass
+    results = {
+        "and": x and y,
+        "or" : x or y,
+        "not_x": not x
+    }
+    return results
 
 def bitwise_ops(a, b):
     """
@@ -105,4 +118,9 @@ def bitwise_ops(a, b):
     Returns:
         dict: Results of bitwise operations
     """
-    pass
+    results = {
+        "and": a & b,
+        "or": a|b,
+        "xor": a^b
+    }
+    return results
