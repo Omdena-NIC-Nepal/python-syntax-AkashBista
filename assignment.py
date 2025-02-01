@@ -7,7 +7,7 @@ def format_string(name, age):
     Returns:
         str: Formatted string
     """
-    pass
+    return (f"Hello!, My name is {name} and I am {age} years old.")
 
 def conditional_check(number):
     """
@@ -17,7 +17,12 @@ def conditional_check(number):
     Returns:
         str: "Greater", "Lesser", or "Equal"
     """
-    pass
+    if number > 10:
+        return "Greater"
+    elif number < 10:
+        return "Lesser"
+    else:
+        return "Equal"
 
 def loop_sum(n):
     """
@@ -27,8 +32,11 @@ def loop_sum(n):
     Returns:
         int: Sum of numbers
     """
-    pass
-
+    sum=0
+    for i in range(1, n+1):
+        sum+=i
+    return sum
+    
 def list_operations(numbers):
     """
     Perform operations on a list of numbers.
@@ -37,7 +45,12 @@ def list_operations(numbers):
     Returns:
         tuple: (sum, max, min)
     """
-    pass
+    total=sum(numbers)
+    maximum=max(numbers)
+    minimum=min(numbers)
+    number_tuple=tuple(total,maximum,minimum)
+    return (number_tuple)
+    
 
 def dict_operations(students_dict):
     """
@@ -47,7 +60,8 @@ def dict_operations(students_dict):
     Returns:
         list: Names of students with scores > 80
     """
-    pass
+    student_score=[name for name, score in students_dict.items() if score>80 ]
+    return (student_score)
 
 def set_operations(list1, list2):
     """
