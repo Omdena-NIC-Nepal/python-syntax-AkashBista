@@ -46,11 +46,7 @@ def list_operations(numbers):
     Returns:
         tuple: (sum, max, min)
     """
-    total=sum(numbers)
-    maximum=max(numbers)
-    minimum=min(numbers)
-    number_tuple=tuple(total,maximum,minimum)
-    return number_tuple
+    return sum(numbers), max(numbers), min(numbers)
     
 
 def dict_operations(students_dict):
